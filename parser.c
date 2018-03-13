@@ -175,7 +175,7 @@ void parse_file ( char * filename,
       sscanf(line, "%lf %lf %lf %lf",
              xvals, yvals, zvals, &theta);
       
-      add_circle(edges, xvals[0], yvals[0], zvals[0], theta, 0.25);
+      add_circle(edges, xvals[0], yvals[0], zvals[0], theta, 0.01);
 
       //print_matrix(edges);
 
@@ -200,7 +200,7 @@ void parse_file ( char * filename,
 	     xvals[3], yvals[3]);
       
       
-      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], xvals[2], yvals[2], xvals[3], yvals[3], 0.25, 1);
+      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], xvals[2], yvals[2], xvals[3], yvals[3], 0.01, 1);
 
       //print_matrix(edges);
 
@@ -224,7 +224,7 @@ void parse_file ( char * filename,
 	     xvals[2], yvals[2],
 	     xvals[3], yvals[3]);
       
-      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], xvals[2], yvals[2], xvals[3], yvals[3], 0.25, 0);
+      add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], xvals[2], yvals[2], xvals[3], yvals[3], 0.01, 0);
 
       //print_matrix(edges);
 

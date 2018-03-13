@@ -65,6 +65,15 @@ void add_curve( struct matrix *points,
   struct matrix * xcofs = generate_curve_coefs( x0, x1, x2, x3, type);
   struct matrix * ycofs = generate_curve_coefs( y0, y1, y2, y3, type);
 
+  //xcofs->m = generate_curve_coefs( x0, x1, x2, x3, type)->m;
+  //ycofs->m = generate_curve_coefs( y0, y1, y2, y3, type)->m;
+
+  printf("(%lf %lf) (%lf %lf)\n", x0, y0, x1, y1);
+  printf("(%lf %lf) (%lf %lf)\n", x2, y2, x3, y3);
+
+  print_matrix(xcofs);
+  print_matrix(ycofs);
+  
   xcor = x0;
   ycor = y0;
 
