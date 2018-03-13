@@ -68,28 +68,28 @@ void add_curve( struct matrix *points,
   //xcofs->m = generate_curve_coefs( x0, x1, x2, x3, type)->m;
   //ycofs->m = generate_curve_coefs( y0, y1, y2, y3, type)->m;
 
-  printf("(%lf %lf) (%lf %lf)\n", x0, y0, x1, y1);
-  printf("(%lf %lf) (%lf %lf)\n", x2, y2, x3, y3);
+  //printf("(%lf %lf) (%lf %lf)\n", x0, y0, x1, y1);
+  //printf("(%lf %lf) (%lf %lf)\n", x2, y2, x3, y3);
 
-  print_matrix(xcofs);
-  print_matrix(ycofs);
+  //print_matrix(xcofs);
+  //print_matrix(ycofs);
   
   xcor = x0;
   ycor = y0;
 
   for (t = 0; t < 1 + step; t += step) {
-    printf("step is currently %lf\n", t);
+    //printf("step is currently %lf\n", t);
     
     x1cor = (xcofs->m[0][0] * t * t * t) + (xcofs->m[1][0] * t * t) + (xcofs->m[2][0] * t) + xcofs->m[3][0];
     y1cor = (ycofs->m[0][0] * t * t * t) + (ycofs->m[1][0] * t * t) + (ycofs->m[2][0] * t) + ycofs->m[3][0];
 
     add_edge(points, xcor, ycor, 0, x1cor, y1cor, 0);
-    printf("(%lf %lf), (%lf, %lf)\n", xcor, ycor, x1cor, y1cor);
+    //printf("(%lf %lf), (%lf, %lf)\n", xcor, ycor, x1cor, y1cor);
 
     xcor = x1cor;
     ycor = y1cor;
   }
-  printf("\n");
+  //printf("\n");
   
 }
 

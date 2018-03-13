@@ -179,9 +179,9 @@ void parse_file ( char * filename,
 
       //print_matrix(edges);
 
-      clear_screen(s);
-      draw_lines(edges, s, c);
-      display( s );
+      //clear_screen(s);
+      //draw_lines(edges, s, c);
+      //display( s );
     }
       
     else if ( strncmp(line, "bezier", strlen(line)) == 0 ) {
@@ -193,20 +193,21 @@ void parse_file ( char * filename,
 	     xvals + 1, yvals + 1,
 	     xvals + 2, yvals + 2,
 	     xvals + 3, yvals + 3);
-      printf("bezier:\n%lf %lf %lf %lf %lf %lf %lf %lf\n",
+      /*printf("bezier:\n%lf %lf %lf %lf %lf %lf %lf %lf\n",
              xvals[0], yvals[0],
 	     xvals[1], yvals[1],
 	     xvals[2], yvals[2],
 	     xvals[3], yvals[3]);
+      */
       
       
       add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], xvals[2], yvals[2], xvals[3], yvals[3], 0.01, 1);
 
       //print_matrix(edges);
 
-      clear_screen(s);
-      draw_lines(edges, s, c);
-      display( s );
+      //clear_screen(s);
+      //draw_lines(edges, s, c);
+      //display( s );
     }
 
     else if ( strncmp(line, "hermite", strlen(line)) == 0 ) {
@@ -218,19 +219,20 @@ void parse_file ( char * filename,
 	     xvals + 1, yvals + 1,
 	     xvals + 2, yvals + 2,
 	     xvals + 3, yvals + 3);
-      printf("hermite:\n%lf %lf %lf %lf %lf %lf %lf %lf\n",
+      /*printf("hermite:\n%lf %lf %lf %lf %lf %lf %lf %lf\n",
              xvals[0], yvals[0],
 	     xvals[1], yvals[1],
 	     xvals[2], yvals[2],
 	     xvals[3], yvals[3]);
+      */
       
       add_curve(edges, xvals[0], yvals[0], xvals[1], yvals[1], xvals[2], yvals[2], xvals[3], yvals[3], 0.01, 0);
 
       //print_matrix(edges);
 
-      clear_screen(s);
-      draw_lines(edges, s, c);
-      display( s );
+      //clear_screen(s);
+      //draw_lines(edges, s, c);
+      //display( s );
     }
       
 
